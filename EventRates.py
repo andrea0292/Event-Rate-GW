@@ -255,7 +255,7 @@ class NumberIntrinsic(GWfunctions):
             snr=np.sqrt(dutycycle)*self.SNR(iota,psi,theta,phi,fmin/(1+z),Fmax,m1*(1+z),m2*(1+z),dl, leng)
 
 
-            dVcdz = cosmo.comoving_volume(z).value 
+            dVcdz = dVdz(self, z) 
         
             
             integralbulk = (tmax-ttmin) * (zmax-zmin) * dVcdz   *np.heaviside(snr-SNRth,0) * (1./(1.+z))
