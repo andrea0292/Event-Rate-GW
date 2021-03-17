@@ -152,7 +152,7 @@ class GWfunctions:
 
     def ampl(self, m1,m2,d): 
 
-        return (self.Mc(m1,m2)*self.G)**(5/6)*np.sqrt(5/24)/(np.pi**(2/3)*d*self.c**(3/2))
+        return 1/2 * (self.Mc(m1,m2)*self.G)**(5/6)*np.sqrt(5/24)/(np.pi**(2/3)*d*self.c**(3/2))
     
     def habs(self, m1,m2,d,f): # gravitational wave frequency
         return self.ampl(m1,m2,d)*f**(-7/6)
